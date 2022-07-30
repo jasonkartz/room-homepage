@@ -20,7 +20,7 @@ body {
 }
 
 #darken {
-  display: none;
+  visibility: visible;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -34,9 +34,12 @@ header {
   background-size: cover;
   width: 100%;
   min-height: 360px;
+  padding-top: 3rem;
+  padding-left: 2rem;
   display: flex;
   justify-content: flex-start;
   align-content: flex-start;
+  gap: 1rem;
 }
 
 #open-menu,
@@ -46,31 +49,41 @@ header {
   height: 14px;
 }
 
+#close-menu {}
+
 #open-menu:hover,
 #close-menu:hover {
   cursor: pointer;
   opacity: 0.75;
 }
 
-#open-menu {
-  margin: 2.5em 0 0 3em;
-}
+#open-menu {}
 
 .logo {
-  margin: 2em auto 0 auto;
+  margin-inline: auto;
 }
 
-.btn-box {
-  position: absolute;
-  right: 0;
-  top: 304px;
+.btn-box-mobile {
+  align-self: flex-end;
+}
+
+.btn-box-desktop {
+  display: none;
 }
 
 .btn-box button {
   border: none;
+  background-color: black;
+}
+
+.btn-box-mobile button {
   width: 56px;
   height: 56px;
-  background-color: black;
+}
+
+.btn-box-desktop button {
+  width: 80px;
+  height: 80px;
 }
 
 .btn-box button:hover {
@@ -87,14 +100,18 @@ ul {
   text-transform: lowercase;
   display: flex;
   justify-content: flex-start;
-  gap: 2em;
+  gap: 2rem;
 }
 
 nav {
-  display: none;
+  visibility: visible;
+  display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
+  gap: .5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: white;
   width: 100%;
   height: 110px;
@@ -136,12 +153,12 @@ h2 {
 }
 
 .text-area-padding {
-  padding: 4em 2em;
+  padding: 4rem 2rem;
 }
 
 #info-section p,
 #about-section p {
-  margin: 1em 0 2em 0;
+  margin: 1rem 0 2rem 0;
 }
 
 #info-text-2 {
@@ -183,7 +200,7 @@ p {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   header {
     background: url("./images/desktop-image-hero-1.jpg") no-repeat;
     background-size: cover;
@@ -200,16 +217,49 @@ p {
 
   .top-container {
     display: flex;
+    width: 100%;
   }
 
-  header {}
+  header {
+    width: 60%;
+  }
+
+
+  #info-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  #info-section .text-area-padding {
+    padding: 5rem 5rem 5rem 5rem;
+    justify-self: center;
+  }
+
+  .btn-box-mobile {
+    display: none;
+  }
+
+  .btn-box-desktop {
+    display: inline;
+    align-self: flex-start;
+  }
 
   #about-section {
     display: flex;
+    justify-content: space-between;
+  }
+
+  #about-section .text-area-padding {
+    padding: 4rem;
+    width: 40%;
   }
 
   .about-img {
-    width: 420px;
-    height: 266px;
+    max-width: 30%;
+    object-fit: cover;
+    object-position: bottom;
   }
 }
