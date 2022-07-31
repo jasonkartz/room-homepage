@@ -20,7 +20,7 @@ body {
 }
 
 #darken {
-  visibility: visible;
+  visibility: hidden;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -63,6 +63,49 @@ header {
   margin-inline: auto;
 }
 
+nav {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 110px;
+  z-index: 2;
+}
+
+nav ul {
+  list-style: none outside none;
+  text-transform: lowercase;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+  padding: .25rem;
+}
+
+nav a:hover {
+  cursor: pointer;
+}
+
+nav a:hover:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  bottom: -1px;
+  left: 25%;
+  border-bottom: 2px solid black;
+}
+
 .btn-box-mobile {
   align-self: flex-end;
 }
@@ -95,47 +138,7 @@ header {
   background-color: var(--light-gray);
 }
 
-ul {
-  list-style: none outside none;
-  text-transform: lowercase;
-  display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
-}
 
-nav {
-  visibility: visible;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: .5rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  width: 100%;
-  height: 110px;
-  z-index: 2;
-}
-
-nav li {
-  display: inline-block;
-  position: relative;
-}
-
-nav a:hover {
-  cursor: pointer;
-}
-
-nav a:hover:before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  bottom: -5px;
-  left: 25%;
-  border-bottom: 2px solid black;
-}
 
 h1 {
   font-size: clamp(40px, 5vw, 48px);
@@ -222,8 +225,25 @@ p {
 
   header {
     width: 60%;
+    gap: 2rem;
   }
 
+  .logo {
+    margin-top: .45rem;
+  }
+
+  nav {
+    visibility: visible;
+    position: static;
+    background-color: transparent;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  nav a:hover:before {
+    border-color: white;
+  }
 
   #info-section {
     width: 40%;
