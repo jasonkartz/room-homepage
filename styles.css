@@ -33,6 +33,7 @@ body {
 header {
   background: url("./images/mobile-image-hero-1.jpg") no-repeat;
   background-size: cover;
+  background-position: top;
   width: 100%;
   min-height: 360px;
   padding-top: 3rem;
@@ -50,21 +51,18 @@ header {
   height: 14px;
 }
 
-#close-menu {}
-
 #open-menu:hover,
 #close-menu:hover {
   cursor: pointer;
   opacity: 0.75;
 }
 
-#open-menu {}
 
 .logo {
   margin-inline: auto;
 }
 
-nav {
+#nav {
   visibility: hidden;
   opacity: 0;
   display: flex;
@@ -81,7 +79,7 @@ nav {
   transition: visibility 300ms, opacity 300ms ease;
 }
 
-nav ul {
+#nav ul {
   list-style: none outside none;
   text-transform: lowercase;
   display: flex;
@@ -89,17 +87,17 @@ nav ul {
   gap: 2rem;
 }
 
-nav ul li {
+#nav ul li {
   display: inline-block;
   position: relative;
   padding: .25rem;
 }
 
-nav a:hover {
+#nav a:hover {
   cursor: pointer;
 }
 
-nav a:hover:before {
+#nav a:hover:before {
   content: "";
   position: absolute;
   width: 50%;
@@ -210,7 +208,7 @@ p {
   header {
     background: url("./images/desktop-image-hero-1.jpg") no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: left;
   }
 }
 
@@ -238,7 +236,7 @@ p {
     margin-top: .45rem;
   }
 
-  nav {
+  #nav {
     visibility: visible;
     position: static;
     background-color: transparent;
@@ -247,7 +245,7 @@ p {
     align-items: flex-start;
   }
 
-  nav a:hover:before {
+  #nav a:hover:before {
     border-color: white;
   }
 
