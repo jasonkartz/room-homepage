@@ -36,7 +36,7 @@ function hideMenu() {
 
 function contentChange() {
   header.style.background = `url("./images/${
-    window.screen.width >= 450 ? "desktop" : "mobile"
+    window.innerWidth >= 450 ? "desktop" : "mobile"
   }-image-hero-${count + 1}.jpg") no-repeat`;
   header.style.backgroundSize = "cover";
   header.style.backgroundPosition = "left";
@@ -67,7 +67,7 @@ function decrementInfoText() {
 
 window.onload = () => {
   contentChange();
-  if (window.screen.width > 999) {
+  if (window.innerWidth >= 1000) {
     displayMenu();
   } else {
     hideMenu();
@@ -75,7 +75,7 @@ window.onload = () => {
 };
 window.onresize = () => {
   contentChange();
-  if (window.screen.width > 999) {
+  if (window.innerWidth >= 1000) {
     displayMenu();
   } else {
     hideMenu();

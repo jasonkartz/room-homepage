@@ -66,9 +66,9 @@ header {
   visibility: hidden;
   opacity: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  gap: .5rem;
+  gap: 4rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -77,6 +77,11 @@ header {
   height: 110px;
   z-index: 2;
   transition: visibility 300ms, opacity 300ms ease;
+}
+
+#close-menu {
+  margin-left: 2rem;
+  margin-bottom: .25rem;
 }
 
 #nav ul {
