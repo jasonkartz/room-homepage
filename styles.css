@@ -148,14 +148,13 @@ header {
 
 h1 {
   font-size: clamp(40px, 5vw, 48px);
-  letter-spacing: -1.67px;
+  letter-spacing: clamp(-1.67px, 5vw, -2px);
   font-weight: 600;
-  line-height: 37px;
+  line-height: clamp(37px, 7vh, 44px);
 }
 
 h2 {
   font-size: clamp(14px, 2vw, 16px);
-  letter-spacing: -1.67px;
   letter-spacing: 5.83px;
   font-weight: 700;
   text-transform: uppercase;
@@ -263,7 +262,7 @@ p {
   }
 
   #info-section .text-area-padding {
-    padding: 5rem 5rem 5rem 5rem;
+    padding: 4rem;
     justify-self: center;
   }
 
