@@ -65,7 +65,14 @@ function decrementInfoText() {
   }
 }
 
-window.onload = contentChange();
+window.onload = () => {
+  contentChange();
+  if (window.screen.width > 999) {
+    displayMenu();
+  } else {
+    hideMenu();
+  }
+};
 window.onresize = () => {
   contentChange();
   if (window.screen.width > 999) {
