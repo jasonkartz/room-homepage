@@ -18,7 +18,10 @@ body {
   line-height: 22px;
   font-weight: 500;
 }
-
+main {
+  max-width: 1440px;
+  margin-inline: auto;
+}
 #darken {
   visibility: hidden;
   position: fixed;
@@ -57,7 +60,6 @@ header {
   opacity: 0.75;
 }
 
-
 .logo {
   margin-inline: auto;
 }
@@ -81,7 +83,7 @@ header {
 
 #close-menu {
   margin-left: 2rem;
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 #nav ul {
@@ -95,7 +97,7 @@ header {
 #nav ul li {
   display: inline-block;
   position: relative;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 #nav a:hover {
@@ -143,8 +145,6 @@ header {
 .btn-box button:active {
   background-color: var(--light-gray);
 }
-
-
 
 h1 {
   font-size: clamp(40px, 5vw, 48px);
@@ -237,7 +237,7 @@ p {
   }
 
   .logo {
-    margin-top: .45rem;
+    margin-top: 0.45rem;
   }
 
   #nav {
@@ -259,6 +259,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    min-height: 534px;
   }
 
   #info-section .text-area-padding {
